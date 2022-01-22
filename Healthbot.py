@@ -1,6 +1,9 @@
 from tkinter import *
 from PIL import ImageTk, Image
 a=Tk()
+def call_ambulance():
+    txt.insert(END, "\n" + "Mr.Ted:I'll notify the nearest hospital\nand send one right away.")
+
 def chatdis():
     msg=e.get()
     msg=str.lower(msg)
@@ -29,6 +32,7 @@ def chatdis():
     e.delete(0, END)
 txt=Text(a)
 a.title("Mr.Ted")
+call_amb=Button(a, text="Call Ambulance", command=call_ambulance).place(x=500, y=100)
 txt.grid(row=0, column=0, columnspan=2)
 c1=Label(a, text="Things you can ask:").place(x=500, y=0)
 c2=Label(a, text="1.Severity of Omicron").place(x=500, y=20)
