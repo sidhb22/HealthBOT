@@ -8,8 +8,9 @@ def chatdis():
     txt.insert(END, "\n"+send)
     if msg== "hi" or msg== "hello" or msg== "anybody there?":
         txt.insert(END, "\n" + "Mr.Ted:Hi. How can I help you?")
-    elif msg == "is omicron very dangerous?":
-        txt.insert(END, "\n" + "Mr.Ted:Studies have shown that Omicron is milder but you take it seriously!")
+    elif msg == "is omicron dangerous?":
+        txt.insert(END, "\n" + "Mr.Ted:Studies have shown that Omicron is milder")
+        txt.insert(END, "\n" + "Mr.Ted:But you take it seriously")
     elif msg == "how do i prevent myself from covid?":
         txt.insert(END, "\n" + "Mr.Ted:Wear your mask, 6-feet distancing and sanitize your hand regularly")
         txt.insert(END, "\n" + "Mr.Ted:Also get vaccinated")
@@ -29,6 +30,11 @@ def chatdis():
 txt=Text(a)
 a.title("Mr.Ted")
 txt.grid(row=0, column=0, columnspan=2)
+c1=Label(a, text="Things you can ask:").place(x=500, y=0)
+c2=Label(a, text="1.Severity of Omicron").place(x=500, y=20)
+c3=Label(a, text="2.Prevention from covid").place(x=500, y=40)
+c4=Label(a, text="2.SOPs when having COVID symptoms ").place(x=500, y=60)
+c4=Label(a, text="3.Ordeing a Self-Test Kit").place(x=500, y=80)
 e=Entry(a, width=100)
 send=Button(a, text="Send", command=chatdis).grid(row=1, column=1)
 e.grid(row=1, column=0)
