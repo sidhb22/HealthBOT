@@ -1,8 +1,6 @@
 from tkinter import *
 from PIL import ImageTk, Image
 a=Tk()
-var=ImageTk.PhotoImage(Image.open("blue.jpg"))
-var_1=Label(a, image=var).place(x=1, y=1)
 def chatdis():
     msg=e.get()
     msg=str.lower(msg)
